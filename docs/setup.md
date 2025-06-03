@@ -1,6 +1,14 @@
-# Setup e Execução - Interface Product
+# Setup e dependências
 
-Este módulo define os contratos da API REST do serviço de produtos.
+Este módulo define apenas a **interface REST `ProductController`** e os DTOs relacionados.
+
+---
+
+## Como compilar
+
+```bash
+mvn clean install
+```
 
 ---
 
