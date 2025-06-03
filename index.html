@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#interface-product" class="md-skip">
+        <a href="#product-interface" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introdução
+              Início
             
           </span>
         </div>
@@ -201,17 +201,100 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Introdução
+    Início
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pacote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura dos arquivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracao-com-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integração com Jenkins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integração com Jenkins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para que serve?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -303,6 +386,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pacote" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pacote
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-dos-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estrutura dos arquivos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracao-com-jenkins" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integração com Jenkins
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integração com Jenkins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que-serve" class="md-nav__link">
+    <span class="md-ellipsis">
+      Para que serve?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -317,17 +459,64 @@
 
 
 
-<h1 id="interface-product">Interface Product</h1>
-<p>A interface <code>ProductController</code> define os contratos REST expostos pelo <code>product-service</code>.</p>
-<p>Ela funciona como um <strong>Feign Client</strong> e permite:</p>
-<ul>
-<li>Criar novos produtos</li>
-<li>Listar produtos</li>
-<li>Buscar produto por ID</li>
-<li>Excluir um produto</li>
-</ul>
-<p>Esta interface deve ser implementada por um microsserviço com persistência (como o <code>product-service</code>).</p>
+<h1 id="product-interface">Product Interface</h1>
+<p>Este módulo define a <strong>interface Feign</strong> para comunicação com o microsserviço <code>product-service</code>, responsável pelo gerenciamento de produtos.</p>
 <hr />
+<h2 id="objetivo">Objetivo</h2>
+<p>Centralizar os contratos REST para operações relacionadas a produtos, evitando duplicação de lógica HTTP e facilitando a comunicação entre microsserviços.</p>
+<hr />
+<h2 id="pacote">Pacote</h2>
+<ul>
+<li><code>store.product</code> – Pacote principal que contém a interface Feign e os objetos de entrada e saída.</li>
+</ul>
+<hr />
+<h2 id="estrutura-dos-arquivos">Estrutura dos arquivos</h2>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ProductController.java</code></td>
+<td>Interface Feign com os endpoints disponíveis do microsserviço de produtos</td>
+</tr>
+<tr>
+<td><code>ProductIn.java</code></td>
+<td>Objeto de entrada para criação e atualização de produto</td>
+</tr>
+<tr>
+<td><code>ProductOut.java</code></td>
+<td>Objeto de resposta contendo dados do produto</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="integracao-com-jenkins">Integração com Jenkins</h2>
+<p>Este projeto conta com um arquivo Jenkinsfile (na raiz do repositório) que define uma pipeline de integração contínua para compilar automaticamente o módulo sempre que houver alterações no repositório.</p>
+<h3 id="para-que-serve">Para que serve?</h3>
+<ul>
+<li>
+<p>Ao efetuar um push no repositório, o Jenkins detecta a mudança e executa esta pipeline.</p>
+</li>
+<li>
+<p>A etapa Build faz a compilação do projeto:</p>
+<ol>
+<li>
+<p>Executa mvn clean install em modo batch (parâmetro -B), sem interação de usuário.</p>
+</li>
+<li>
+<p>Pulando os testes (-DskipTests), gera rapidamente o artefato (JAR) do módulo de interface.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Caso a compilação falhe, o Jenkins sinaliza erro, impedindo que alterações com problemas sejam mescladas ou implantadas.</p>
+</li>
+</ul>
+<p>Dessa forma, a integração com Jenkins garante que o código da interface Feign esteja sempre compilando corretamente antes de ser utilizado por outros microsserviços.</p>
 
 
 
