@@ -3,7 +3,7 @@ theme:
   name: material
 
 nav:
-  - Introdução: index.md
+  - Início: index.md
   - Entidades: entidades.md
   - Endpoints: endpoints.md
   - Setup: setup.md
