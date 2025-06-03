@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../endpoints/">
       
       
-        <link rel="next" href="../endpoints/">
+        <link rel="next" href="../setup/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Entidades - Documentação Product</title>
+        <title>Estrutura - Documentação Product</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#entidades" class="md-skip">
+        <a href="#estrutura-de-pastas" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Entidades
+              Estrutura
             
           </span>
         </div>
@@ -213,6 +213,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../endpoints/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Endpoints
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -230,7 +252,7 @@
   
   
   <span class="md-ellipsis">
-    Entidades
+    Estrutura
     
   </span>
   
@@ -243,7 +265,7 @@
   
   
   <span class="md-ellipsis">
-    Entidades
+    Estrutura
     
   </span>
   
@@ -287,28 +309,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../endpoints/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Endpoints
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -395,8 +395,12 @@
 
 
 
-<h1 id="entidades">Entidades</h1>
-<hr />
+<h1 id="estrutura-de-pastas">Estrutura de pastas</h1>
+<pre><code class="language-bash">src/main/java/store/product/
+├── ProductController.java  # Interface Feign
+├── ProductIn.java          # DTO de entrada
+└── ProductOut.java         # DTO de saída
+</code></pre>
 <h2 id="productin"><code>ProductIn</code></h2>
 <p>Representa os dados de entrada para cadastro de produto.</p>
 <pre><code class="language-java">record ProductIn(
