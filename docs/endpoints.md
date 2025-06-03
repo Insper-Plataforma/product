@@ -1,6 +1,10 @@
-# Endpoints
+# Endpoints - Feign Interface `ProductController`
 
-### `POST /product`
+Todos os endpoints se referem ao microsserviço `product` com base URL: `http://product:8080`.
+
+---
+
+### POST `/product`
 
 Cria um novo produto.
 
@@ -9,7 +13,7 @@ Cria um novo produto.
 
 ---
 
-### `GET /product`
+### GET `/product`
 
 Retorna todos os produtos cadastrados.
 
@@ -17,7 +21,7 @@ Retorna todos os produtos cadastrados.
 
 ---
 
-### `GET /product/{idProduct}`
+### GET `/product/{idProduct}`
 
 Busca um produto pelo seu ID.
 
@@ -26,7 +30,7 @@ Busca um produto pelo seu ID.
 
 ---
 
-### `DELETE /product/{idProduct}`
+### DELETE `/product/{idProduct}`
 
 Remove um produto do sistema.
 

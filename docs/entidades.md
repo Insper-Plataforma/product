@@ -1,8 +1,13 @@
-# Entidades
+# Estrutura de pastas
 
----
+```bash
+src/main/java/store/product/
+├── ProductController.java  # Interface Feign
+├── ProductIn.java          # DTO de entrada
+└── ProductOut.java         # DTO de saída
+```
 
-## `ProductIn`
+## ProductIn
 
 Representa os dados de entrada para cadastro de produto.
 
@@ -22,7 +27,7 @@ record ProductIn(
 
 ---
 
-## `ProductOut`
+## ProductOut
 
 Representa a resposta da API ao lidar com produtos.
 

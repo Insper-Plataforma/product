@@ -4,6 +4,6 @@ theme:
 
 nav:
   - Início: index.md
-  - Entidades: entidades.md
   - Endpoints: endpoints.md
+  - Estrutura: entidades.md
   - Setup: setup.md
