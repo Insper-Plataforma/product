@@ -433,27 +433,28 @@
 
 <h1 id="endpoints-feign-interface-productcontroller">Endpoints - Feign Interface <code>ProductController</code></h1>
 <p>Todos os endpoints se referem ao microsserviço <code>product</code> com base URL: <code>http://product:8080</code>.</p>
-<h3 id="post-product"><code>POST /product</code></h3>
+<hr />
+<h3 id="post-product">POST <code>/product</code></h3>
 <p>Cria um novo produto.</p>
 <ul>
 <li><strong>Request body</strong>: <a href="../entidades/#productin"><code>ProductIn</code></a></li>
 <li><strong>Response</strong>: <a href="../entidades/#productout"><code>ProductOut</code></a></li>
 </ul>
 <hr />
-<h3 id="get-product"><code>GET /product</code></h3>
+<h3 id="get-product">GET <code>/product</code></h3>
 <p>Retorna todos os produtos cadastrados.</p>
 <ul>
 <li><strong>Response</strong>: <code>List&lt;ProductOut&gt;</code></li>
 </ul>
 <hr />
-<h3 id="get-productidproduct"><code>GET /product/{idProduct}</code></h3>
+<h3 id="get-productidproduct">GET <code>/product/{idProduct}</code></h3>
 <p>Busca um produto pelo seu ID.</p>
 <ul>
 <li><strong>Path param</strong>: <code>idProduct</code></li>
 <li><strong>Response</strong>: <a href="../entidades/#productout"><code>ProductOut</code></a></li>
 </ul>
 <hr />
-<h3 id="delete-productidproduct"><code>DELETE /product/{idProduct}</code></h3>
+<h3 id="delete-productidproduct">DELETE <code>/product/{idProduct}</code></h3>
 <p>Remove um produto do sistema.</p>
 <ul>
 <li><strong>Path param</strong>: <code>idProduct</code></li>
